@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Crop Advisory</title>
+</head>
+<body>
+    <h1>🌱 Smart Crop Advisory System</h1>
+
+    {% if farmer and crop and advisory %}
+        <h2>Hello {{ farmer.name }} from {{ farmer.location }}</h2>
+        <p><b>Crop:</b> {{ crop.name }}</p>
+        <p><b>Advisory:</b> {{ advisory.message }}</p>
+    {% else %}
+        <p>No advisory available. Please add data in the admin panel.</p>
+    {% endif %}
+</body>
+</html>
